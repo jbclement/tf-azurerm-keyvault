@@ -39,3 +39,21 @@ variable "enabled_for_template_deployment" {
   type        = bool
   default     = false
 }
+
+variable "enable_rbac_authorization" {
+  description = "Boolean flag to specify whether Azure Key Vault uses Role Based Access Control (RBAC) for authorization of data actions."
+  type = bool
+  default = false
+}
+
+variable "purge_protection_enabled" {
+   description = "Is Purge Protection enabled for this Key Vault? "
+   type = bool
+   default =   "false"
+}
+
+variable "public_network_access_enabled" {
+   description = "Whether public network access is allowed for this Key Vault."
+   type = bool 
+   default =   "true"
+}
